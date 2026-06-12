@@ -36,8 +36,12 @@ The system is split into two cleanly separated layers:
 
 ## Local Setup & Installation
 
-To run PyMentor locally, you will need Python 3.10+ installed on your machine.
+To run **PyMentor** locally, you will need **Python 3.10+** installed on your machine.
 
+<details>
+<summary><strong>Click here to view the step-by-step terminal commands</strong></summary>
+
+```bash
 # 1. Clone the repository
 git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git
 
@@ -57,31 +61,48 @@ source .venv/bin/activate
 
 # 5. Install the required Python packages
 pip install -r requirements.txt
-Environment Configuration
+```
 
-Create a .env file inside the computer-history-client folder (you can use the provided .env.example file as a template).
+</details>
+
+---
+
+## Environment Configuration
+
+Create a `.env` file inside the `computer-history-client` folder (you can use the provided `.env.example` file as a template).
 
 Add your Microsoft AI endpoint credentials securely:
 
+```env
 AGENT_ENDPOINT="your_microsoft_foundry_endpoint_here"
-Note on Subscription Expiration (Mock Mode)
+```
+
+### Note on Subscription Expiration (Mock Mode)
 
 If the live Azure endpoint is currently offline or the trial subscription has lapsed, the application includes an offline fallback mode.
 
-Simply add the following to your .env file:
+Simply add the following to your `.env` file:
 
+```env
 MOCK_MODE=true
+```
 
 This allows you to explore the frontend user interface and application routing logic without requiring active API keys.
 
-Running the Application
+---
+
+## Running the Application
 
 Once your environment is configured, launch the local web server by executing the primary Flask script:
 
+```bash
 python app.py
+```
 
 Open your web browser and navigate to:
 
+```text
 http://127.0.0.1:5000
+```
 
-to start your session with PyMentor.
+to start your session with **PyMentor**.
